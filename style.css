@@ -99,14 +99,14 @@ a{
 }
 #barra_lateral{
     float:left;
-    width:30%;
+    width:20%;
     height:100%;
     background-color: green;
 }
 #contenido_princ{
     float:left;
     background-color: blue;
-    width:70%;
+    width:80%;
     height:100%;
 
 }
