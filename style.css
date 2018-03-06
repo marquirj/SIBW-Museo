@@ -1,0 +1,111 @@
+html{
+  margin: 0 auto;
+  background-color: #F5F5F5;
+  width: 100%;
+  height: 100%;
+}
+body{
+  margin-top:1%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  height: 100%;
+  border-style: solid;
+  border-width: 1px;
+}
+
+header, footer{
+  margin-top:1%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  height: 15%;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#cab_izq{
+  float:left;
+  height: 100%;
+  width: 20%;
+}
+
+#logo{
+  width: 100%;
+  height:100%;
+}
+
+#cab_der{
+  margin-left: 5%;
+  float:left;
+  height: 100%;
+  width: 75%;
+}
+
+#cab_titulo{
+  padding-top: 1%;
+  width: 100%;
+  height: 75%;
+}
+
+#titulo{
+  /*padding: 0;
+  margin: 0;*/
+  width: 100%;
+  float:left;
+  /*font-size: 3vw;
+  font-size: 4vh;*/
+}
+
+#cab_menu{
+  width: 100%;
+  height: 25%;
+  background-color:white;
+}
+
+#menu_princ{
+  width: 100%;
+  height: 100%;
+}
+
+#menu_sec{
+  padding: 0%;
+  margin: 0%;
+}
+#menu_lista{
+  display: inline;
+  padding-right: 7%;
+  border:1px solid black;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/*      FOOTER      */
+
+#foo_izq{
+    float:left;
+    height:100%;
+    width:23%;
+
+}
+#foo_der{
+    float:left;
+    height:100%;
+    width:75.5%;
+
+}
+#foo_titulo{
+    width:100%;
+    height:75%;
+    border:dotted;
+}
+#foo_menu{
+    width:100%;
+    height:20%;
+    border:dotted;
+    margin-top:-6px;
+}
