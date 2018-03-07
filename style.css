@@ -12,6 +12,7 @@ body{
   height: 100%;
   border-style: solid;
   border-width: 1px;
+  background-color:  #f2f3f4 ;
 }
 
 header, footer{
@@ -113,7 +114,8 @@ header, footer{
     float:left;
     background-image: url(img/cuerpo.png);
     background-repeat: repeat-y;
-    width:80%;
+    width:79%;
+    margin-left: 1%;
     height:100%;
 
 }
