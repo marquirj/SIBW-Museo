@@ -51,10 +51,11 @@ header, footer{
 
 #titulo{
   padding-top: 1%;
-  padding-left: 2%;
+  padding-left: 20%;
   /*margin: 0;*/
   width: 100%;
   float:left;
+  color: #dbc4c5;
   /*font-size: 3vw;
   font-size: 4vh;*/
 }
@@ -80,12 +81,17 @@ header, footer{
   display: inline;
   padding-left: 2%;
   padding-right: 7%;
-  border:1px solid black;
+  /*border:1px solid black;*/
 
 }
 
-a{
+#menu_lista a{
   text-decoration: none;
+  color: #dbc4c5;
+}
+
+#menu_lista a:hover{
+	color: white;
 }
 /*      CONTENIDO       */
 #contenido{
@@ -118,9 +124,21 @@ a{
     float:left;
     height:100%;
     width:20%;
-    background-image: url(img/foo_izq.png);
+    background-image: url(img/logo.png);
 
 }
+/*#foo_lista {
+  list-style: none;
+}
+#foo_lista a{
+  text-decoration: none;
+  color: #dbc4c5;
+}
+
+#foo_lista a:hover{
+	color: white;
+}*/
+
 #foo_der{
     float:left;
     height:100%;
@@ -135,10 +153,11 @@ a{
 
 #foot_titulo{
   padding-top: 1%;
-  padding-left: 2%;
+  padding-left: 15%;
 
   width: 100%;
   float:left;
+  color: #dbc4c5;
   /*font-size: 3vw;
   font-size: 4vh;*/
 }
@@ -146,13 +165,13 @@ a{
     padding-top: 0%;
     width:100%;
     height:25%;
-    background-color: yellow;
     background-image:url(img/cab_menu.png);
 }
 
 #copyright{
-  margin: 0;
-  padding: 0;
+  margin:0;
+  padding-left: 30%;
+  color: #dbc4c5;
 }
 
 
