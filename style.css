@@ -176,6 +176,73 @@ header, footer{
   color: #dbc4c5;
 }
 
+/*------------------------------------------------------OBRA-------------------------------------------------------------------------------*/
+
+#info_obra{
+  width: 50%;
+  height: 30%;
+  padding-top: 1%;
+  float: left;
+  /*border:1px solid black;*/
+}
+
+#tit_obra{
+  padding:2%;
+  margin: 0%;
+  width: 70%;
+  float:left;
+  /*border:1px solid black;*/
+}
+
+#aut_obra{
+  padding:2%;
+  margin: 0%;
+  width: 100%;
+  float:left;
+  /*border:1px solid black;*/
+}
+
+#dat_obra{
+  padding:2%;
+  margin: 0%;
+  width: 100%;
+  float:left;
+  /*border:1px solid black;*/
+}
+
+#fotos_obra{
+  margin-left: 0%;
+  width: 30%;
+  height: 60%;
+  float:right;
+  /*border:1px solid black;*/
+}
+
+#f1_obra{
+  width: 90%;
+  height: 45%;
+  margin-top: 2%;
+  float:left;
+  /*border:1px solid black;*/
+}
+
+#f2_obra{
+  width: 90%;
+  height: 45%;
+  margin-top: 2%;
+  float:left;
+  /*border:1px solid black;*/
+}
+
+#des_obra{
+  margin-top: 20%;
+  width: 90%;
+  height: 65%;
+  padding-left: 1%;
+  /*border:1px solid black;*/
+}
+/*------------------------------------------------------OBRA-------------------------------------------------------------------------------*/
+
 
 @media (max-width:800px) {
   body {
