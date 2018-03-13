@@ -97,6 +97,7 @@ header, footer{
 /*      CONTENIDO       */
 #contenido{
     height:60%;
+    /*min-height: 60%;*/
     width:90%;
     margin-top:1%;
     margin-left: auto;
@@ -256,17 +257,180 @@ header, footer{
 }
 
 #texto{
-  font-size: 1em;
+  font-size: 0.95em;
 }
 /*------------------------------------------------------OBRA-------------------------------------------------------------------------------*/
 
+@media  (max-width:727px){
+  html{
+       width:auto;
+       margin: 0 auto;
+   }
+ body {
+   width:600px; /*The width is 100%, when the viewport is 800px or smaller*/
+   margin: 0 auto;
+ }
+ #barra_lateral li{
+   margin-left: -30px;
+     font-size: 0.9em;
+ }
+ #contenido{
+     width: 800px;
+ }
+ #info_obra img{
+   margin-left:  -5px;
+   width: 20px;
+   height: 20px;
+ }
+ #tit_obra, #aut_obra, #dat_obra{
+   font-size: 1em;
+ }
+ #titulo, #foo_titulo{
+   font-size: 0.9em;
+ }
+ #texto{
+   font-size: 0.65em;
+ }
+   #barra_lateral{
+       margin-left: 29px;
+       width: 100px;
+   }
+   #contenido_princ{
+       width: 437px
+   }
+   li{
+       list-style: none;
+   }
+.listas{
 
-@media (max-width:800px) {
+   margin-left: -10px;
+   font-size:15px;
+}
+}
+@media (min-width:728px) and (max-width:1023px) {
+    html{
+        width: auto;
+    }
   body {
-    width:100%; /*The width is 100%, when the viewport is 800px or smaller*/
+    width:600px; /*The width is 100%, when the viewport is 800px or smaller*/
+    height: 800px;
   }
-/*
+  #titulo, #foo_titulo{
+    font-size: 0.9em;
+  }
   #contenido{
-    height: 150%;
-  }*/
+      width: 800px;
+      /*height:1200px;*/
+  }
+  #info_obra{
+    height: 130px;
+  }
+  #info_obra img{
+    margin-left:  -5px;
+    width: 20px;
+    height: 20px;
+  }
+  #tit_obra, #aut_obra, #dat_obra{
+    font-size: 1em;
+  }
+  #texto{
+    font-size: 0.7em;
+  }
+    #barra_lateral{
+        margin-left: 30px;
+        width: 100px;
+        font-size: 0.9em;
+    }
+    #contenido_princ{
+        width: 434px
+    }
+    #fotos_obra{
+      width: 180px;
+      height: 210px;
+    }
+    li{
+        list-style: none;
+    }
+    .listas{
+
+        margin-left: -10px;
+        font-size:15px;
+    }
+
+} /*Fin MEdia 728px*/
+
+
+@media (min-width:1024px) and (max-width:1200px) {
+    html{
+        width: auto;
+
+    }
+  body {
+    width:1023px; /*The width is 100%, when the viewport is 800px or smaller*/
+  }
+  #contenido{
+      width: 920px;
+  }
+  #info_obra img{
+    margin-left:  -5px;
+    width: 20px;
+    height: 20px;
+  }
+    #barra_lateral{
+
+        width: 150px;
+    }
+    #contenido_princ{
+        padding-left: 20px;
+        width: 740px;
+    }
+    li{
+        list-style: none;
+    }
+  .listas{
+
+
+      font-size:15px;
+  }
+  #texto{
+    font-size: 0.9em;
+  }
+} /*Fin media 1023px*/
+
+@media (min-width:1201px) and (max-width:1600px) {
+  html{
+      width: auto;
+
+  }
+body {
+  width:1023px; /*The width is 100%, when the viewport is 800px or smaller*/
+}
+#contenido{
+    width: 920px;
+}
+#info_obra img{
+  margin-left:  -5px;
+  width: 20px;
+  height: 20px;
+}
+  #barra_lateral{
+
+      width: 150px;
+  }
+  #contenido_princ{
+      padding-left: 20px;
+      width: 740px;
+  }
+  li{
+      list-style: none;
+  }
+.listas{
+
+
+    font-size:15px;
+}
+#texto{
+  font-size: 0.8em;
+}
+} /*Fin media 1023px*/
 }
