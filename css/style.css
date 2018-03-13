@@ -312,8 +312,8 @@ header, footer{
         width: auto;
     }
   body {
-    width:600px; /*The width is 100%, when the viewport is 800px or smaller*/
-    height: 800px;
+    width:800px; /*The width is 100%, when the viewport is 800px or smaller*/
+    /*height: 800px;*/
   }
   #titulo, #foo_titulo{
     font-size: 0.9em;
@@ -337,12 +337,12 @@ header, footer{
     font-size: 0.7em;
   }
     #barra_lateral{
-        margin-left: 30px;
-        width: 100px;
+        margin-left: 40px;
+        width: 120px;
         font-size: 0.9em;
     }
     #contenido_princ{
-        width: 434px
+        width: 610px
     }
     #fotos_obra{
       width: 180px;
