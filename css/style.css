@@ -393,7 +393,7 @@ header, footer{
       font-size:15px;
   }
   #texto{
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 } /*Fin media 1023px*/
 
@@ -430,7 +430,7 @@ body {
     font-size:15px;
 }
 #texto{
-  font-size: 0.8em;
+  font-size: 0.9em;
 }
 } /*Fin media 1023px*/
 }
