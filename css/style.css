@@ -233,23 +233,24 @@ header, footer{
 }
 
 #f1_obra{
-  width: 90%;
-  height: 45%;
+  width: 80%;
+  height: 40%;
   margin-top: 2%;
   float:left;
   /*border:1px solid black;*/
 }
 
 #f2_obra{
-  width: 90%;
-  height: 45%;
+  width: 80%;
+  height: 40%;
   margin-top: 2%;
   float:left;
   /*border:1px solid black;*/
 }
 
 #des_obra{
-  margin-top: 20%;
+
+  margin-top: 17%;
   width: 90%;
   height: 65%;
   padding-left: 1%;
@@ -257,10 +258,27 @@ header, footer{
 }
 
 #texto{
+
+    text-align: justify;
   font-size: 0.95em;
 }
 /*------------------------------------------------------OBRA-------------------------------------------------------------------------------*/
 
+/*   COMENTARIOS JS   */
+
+.comentarios{
+    width:100px;
+}
+#com{
+    width:300px;
+    resize:none;
+}
+
+/* -------------------*/
+
+
+
+/*      RESPONSIVE      */
 @media  (max-width:727px){
   html{
        width:auto;
