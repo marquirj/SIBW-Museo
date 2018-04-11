@@ -1,42 +1,5 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <title>Universidad de Granada</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <script type="text/javascript" src="js/form.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
-</head>
-<body>
-  <header>
-        <div id="cab_izq">
-          <img id="logo" alt="Logo" src="img/logo.png" />
-        </div>
-        <div id="cab_der">
-            <div id="cab_titulo">
-              <h2 id="titulo">MUSEO DEL CARNAVAL</h2>
-            </div>
-            <div id="cab_menu">
-              <nav id="menu_princ">
-                  <ul id="menu_sec">
-                      <li id="menu_lista"><a href="index.html">Índice</a></li>
-                      <!--<li id="menu_lista"><a href="#">Obra</a></li>
-                      <li id="menu_lista"><a href="#">Obra Imprimir</a></li>-->
-                  </ul>
-              </nav>
-            </div>
-        </div>
-</header>
-<div id="contenido">
-    <aside id="barra_lateral">
-        <ul>
-            <li><a href="#">Menú 1</a></li>
-            <li><a href="#">Menú 2</a></li>
-            <li><a href="#">Menú 3</a></li>
-            <li><a href="#">Menú 4</a></li>
-        </ul>
-    </aside>
-    <section id="contenido_princ">
+<?php
+    echo'<section id="contenido_princ">
         <div id="info_obra">
           <h1 id="tit_obra">Título Obra</h1>
             <a href="#"><img alt="siguenos en facebook" height="32" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="32" /></a>
@@ -79,28 +42,6 @@
           <p>Javier:</p> <p>QUE VIVA EL CARNAVAL</p>
           </div>
     </section>
-</div>
-<footer>
-      <img id="foo_izq" alt="Logo" src="img/logo.png" />
-        <!--<nav id="foo_princ">
-            <ul id="foo_menu_sec">
-                <li id="foo_lista"><a href="#">Índice</a></li>
-                <li id="foo_lista"><a href="#">Obra</a></li>
-                <li id="foo_lista"><a href="#">Obra Imprimir</a></li>
-            </ul>
-        </nav>-->
-      </div>
-      <div id="foo_der">
-          <div id="foo_titulo">
-            <h2 id="foot_titulo">UNIVERSIDAD DE GRANADA</h2>
-          </div>
-          <div id="foo_menu">
-            <p id="copyright"> &copy;Todos los derechos reservados.</p>
-          </div>
-      </div>
-</footer>
+</div>'
 
-
-
-</body>
-</html>
+ ?>
