@@ -1,12 +1,17 @@
 <?php
+  //function llama_obra($titulo, $autor, $datacion, $descripcion, $fecha_publi, $fecha_){
+  //$titulo= "pollas en ollas";
+
     echo'<section id="contenido_princ">
         <div id="info_obra">
-          <h1 id="tit_obra">Título Obra</h1>
+          <h1 id="tit_obra">EOO->'.$fila[1].'</h1>
             <a href="#"><img alt="siguenos en facebook" height="32" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="32" /></a>
             <a href="#"><img alt="siguenos en Twitter" height="32" src="http://3.bp.blogspot.com/-wlwaJJG-eOY/UiXnHS2jLsI/AAAAAAAAByQ/I2tLyZDLNL4/s1600/Twitter+NEW.png" title="siguenos en Twitter" width="32" /></a>
             <a href="obra_imprimir.html" target="_blank"><img alt="imprime la obra" height="32" src="img/print.png" title="siguenos en Twitter" width="32" /></a>
 
           <h2 id="aut_obra">Autor Obra</h2>
+          <h3 id="dat_obra">Datación</h3>
+          <h3 id="dat_obra">Datación</h3>
           <h3 id="dat_obra">Datación</h3>
           <input type="button" id="bt_comentario" value="Ver Comentarios" onclick="mostrar()"/>
         </div>
@@ -43,5 +48,5 @@
           </div>
     </section>
 </div>'
-
+//}
  ?>

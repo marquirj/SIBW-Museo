@@ -216,10 +216,11 @@ header, footer{
   /*border:1px solid black;*/
 }
 
-#dat_obra{
+.dat_obra{
   padding:2%;
   margin: 0%;
   width: 100%;
+  font-size: 1em;
   float:left;
   /*border:1px solid black;*/
 }
@@ -250,7 +251,7 @@ header, footer{
 }
 
 #texto{
-
+    padding-top: 10%;
     text-align: justify;
   font-size: 0.95em;
 }
