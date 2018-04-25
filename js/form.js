@@ -27,7 +27,7 @@ function enviar(){
 
 }
 
-var badwords = ['mierda','polla','subnormal','gilipollas','coño','caca','puta','capullo','cojones','zorra']
+//var badwords = ['mierda','polla','subnormal','gilipollas','coño','caca','puta','capullo','cojones','zorra']
 
 function reemplaza(){
   var texto = document.getElementById('com').value

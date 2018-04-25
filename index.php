@@ -4,7 +4,19 @@ require('funciones/maquetacionHTML.php');
 require('funciones/muestra_contenido.php');
 include_once('conexion.php');
 
-$indice=$_GET['indice'];
+if(!isset($_GET['obra'])){
+  HTMLinicio("Página principal");
+  cabecera();
+  nav(0);
+  contenido(); //abrimos contenid
+  sectionPagPrincArticulos();
+  cierreContenido();
+  cierraEstructura();
+  pie();
+  HTMLfin();
+}
+
+$indice=$_GET['obra'];
 //echo $nombre;
 if($indice==0){
   $_SESSION['tipo']=0;
@@ -18,7 +30,7 @@ nav(0);
 contenido(); //abrimos contenido
 if($_SESSION['tipo']==0){
   sectionPagPrincArticulos();
-}else{ //cuando es distinto de 0 entra
+}else if($_SESSION['tipo']<=9 || $_SESSION['tipo']>=1){ //cuando es distinto de 0 entra
   sectionPagPrincObra();
   comentarioJavascript();
 }

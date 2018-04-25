@@ -21,6 +21,8 @@ echo '<!DOCTYPE html>
               <nav id="menu_princ">
                   <ul id="menu_sec">
                       <li id="menu_lista"><a href="#">Índice</a></li>
+                      <li id="menu_lista"><a href="#">Colección Artesanal</a></li>
+                      <li id="menu_lista"><a href="#">Colección Artística</a></li>
                       <!--<li id="menu_lista"><a href="#">Obra</a></li>
                       <li id="menu_lista"><a href="#">Obra Imprimir</a></li>-->
                   </ul>
