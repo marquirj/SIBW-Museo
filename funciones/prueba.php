@@ -1,36 +1,11 @@
 <?php
-
-
-
-function colecciones(coleccion_p){
-    include_once('conexion.php');
-  $_SESSION['tipo']=1;
-  $con3 = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
-  $query = "SELECT titulo FROM Obra where coleccion=coleccion_p";
-
-  $rec1=mysqli_query($con3,$query);
-  //$obra=mysqli_fetch_array($rec); //array asociativo obra
-while($row = mysqli_fetch_array($rec1)){
-echo '<article class="imag">
-      <a class="escritura" href="?obra=1"><img class="pr" src="img/logo.png" alt="vistas" />'.$row["titulo"].'</a>
-  </article>
-  <article class="imag">
-      <a class="escritura" href="?obra=2"><img class="pr" src="img/logo.png" alt="vistas" />'.$row["titulo"].'</a>'.}.'
-}
 function sectionPagPrincArticulos(){
-    include_once('conexion.php');
-  $_SESSION['tipo']=1;
-  $con2 = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
-  $query = "SELECT titulo FROM Obra";
-
-  $rec1=mysqli_query($con2,$query);
-  //$obra=mysqli_fetch_array($rec); //array asociativo obra
-while($row = mysqli_fetch_array($rec1)){
+        
 echo '<article class="imag">
-      <a class="escritura" href="?obra=1"><img class="pr" src="img/logo.png" alt="vistas" />'.$row["titulo"].'</a>
+      <a class="escritura" href="?obra=1"><img class="pr" src="img/logo.png" alt="vistas" />Pepito</a>
   </article>
   <article class="imag">
-      <a class="escritura" href="?obra=2"><img class="pr" src="img/logo.png" alt="vistas" />'.$row["titulo"].'</a>'.}.'
+      <a class="escritura" href="?obra=2"><img class="pr" src="img/logo.png" alt="vistas" />Pepito</a>
   </article>
   <article class="imag">
       <a class="escritura" href="?obra=3"><img  class="pr"src="img/logo.png" alt="vistas" />Pepito</a>
@@ -86,7 +61,12 @@ function sectionPagPrincObra(){
     <div id="des_obra">
     </br> <p id="texto">'.$obra["descripcion"].'</p>
     </div>';
+    /*$seleccion = "SELECT palabra FROM BadWords WHERE id_palabra=1";
+    $rec1 =mysqli_query($con,$seleccion);
+    $mispalabras=mysqli_fetch_array($rec1);
 
+    echo $mispalabras["palabra"];
+    echo 'holaaa';*/
 }
 
 ?>

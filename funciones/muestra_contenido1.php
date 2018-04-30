@@ -1,18 +1,31 @@
 <?php
+include_once('conexion.php');
+//$con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
+function colecciones($coleccion_p){
+    $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
+    $query2 = "SELECT titulo FROM Obra WHERE coleccion='{$coleccion_p}'";
+    $rec2=mysqli_query($con,$query2);
+    while($row2 = mysqli_fetch_array($rec2)){
+
+    echo '<article class="imag">
+          <a class="escritura" href="?obra=1"><img class="pr" src="img/logo.png" alt="vistas" />'.$row2["titulo"].'</a>
+      </article>';
+      }
+      mysqli_close( $con );
+}
+
 
 function sectionPagPrincArticulos(){
   $_SESSION['tipo']=1;
-
+  $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
+$query1 = "SELECT titulo FROM Obra";
+$rec1=mysqli_query($con,$query1);
+while($row = mysqli_fetch_array($rec1)){
 echo '<article class="imag">
-      <a class="escritura" href="?obra=1"><img class="pr" src="img/logo.png" alt="vistas" />Pepito</a>
-  </article>
-  <article class="imag">
-      <a class="escritura" href="?obra=2"><img class="pr" src="img/logo.png" alt="vistas" />Pepito</a>
-  </article>
-  <article class="imag">
-      <a class="escritura" href="?obra=3"><img  class="pr"src="img/logo.png" alt="vistas" />Pepito</a>
-  </article>
-
+      <a class="escritura" href="?obra=1"><img class="pr" src="img/logo.png" alt="vistas" />'.$row["titulo"].'</a>
+  </article>';
+  }
+  echo'
   <article class="imag">
       <a class="escritura" href="?obra=4"><img class="pr" src="img/logo.png" alt="vistas" />Pepito</a>
   </article>
@@ -32,13 +45,13 @@ echo '<article class="imag">
   <article class="imag">
       <a class="escritura" href="?obra=2"><img  class="pr"src="img/logo.png" alt="vistas" />Pepito</a>
   </article>';
-
+mysqli_close( $con );
 }
 
-function sectionPagPrincObra(){
-  include_once('conexion.php');
-
-  $filtro = $_SESSION['tipo'];
+function sectionPagPrincObra($h){
+  //include_once('conexion.php');
+  $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
+  $filtro =$h;
   $query = "SELECT * FROM Obra WHERE id_obra= '{$filtro}' ";
 
   $rec=mysqli_query($con,$query);
@@ -63,47 +76,8 @@ function sectionPagPrincObra(){
     <div id="des_obra">
     </br> <p id="texto">'.$obra["descripcion"].'</p>
     </div>';
+    mysqli_close( $con );
 }
 
-function comentarioJavascript(){
 
-  //include_once('conexion.php');
-
-  $filtro = $_SESSION['tipo'];
-  $query = "SELECT * FROM Obra WHERE id_obra= '{$filtro}' ";
-
-  $rec=mysqli_query($con,$query);
-  $obra=mysqli_fetch_array($rec); //array asociativo obra
-
-  echo '  <div id="info_obra">
-      <h1 id="tit_obra">'.$obra["titulo"].'</h1>';
-
-  echo '
-  <h1 id="">'.$rec1[0]["id_palabra"].'</h1>';
-    echo '
-    <h1 id="">'.$bad["palabra"].' EOOOOO</h1>';
-      //echo bad[1];
-        /*echo bad[2];
-          echo bad[3];
-            echo bad[4];
-              echo bad[5];*/
-
-  echo '  <div id="abs_comentario">
-      <div id="form_comentario">
-              <form method="post">
-                  <fieldset>
-                  <input id="usu" type="text" name="username" placeholder="Nombre.."></input>
-                      <input id="cor" type="email" name="username" placeholder="Correo.."></input>
-                  <textarea id="com" placeholder="Deje un comentario.." onkeyup="reemplaza()"></textarea>
-                  <button type="button" onclick="enviar()">Enviar</button>
-              </fieldset>
-              </form>
-      </div>
-
-      <div id="comentarios">
-      <p>Paco:</p> <p>Me encanta</p>
-      <p>Luis:</p> <p>Menuda pasada!!!!!!</p>
-      <p>Javier:</p> <p>QUE VIVA EL CARNAVAL</p>
-      </div>';
-}
 ?>

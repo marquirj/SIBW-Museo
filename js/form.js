@@ -29,13 +29,18 @@ function enviar(){
 
 //var badwords = ['mierda','polla','subnormal','gilipollas','coño','caca','puta','capullo','cojones','zorra']
 
-function reemplaza(){
-  var texto = document.getElementById('com').value
+function reemplaza(datos){
+    // document.write(datos(0))
+    console.log(datos(0).value)
+    var texto = document.getElementById('com').value
   var palabras = texto.split(" ")
   for(var k = 0; k < palabras.length; k++)
-    for (var i = 0; i < badwords.length; i++) {
-      if(palabras[k] == badwords[i]){
-          palabras[k] = palabras[k].replace(badwords[i], function(x){
+  //console.log(2)
+    for (var i = 0; i < datos.length; i++) {
+    //    console.log(3)
+      if(palabras[k] == datos(i)){
+          console.log(888888888)
+          palabras[k] = palabras[k].replace(datos(i), function(x){
           var censurado = ""
           for (var j = 0; j < x.length; j++) {
             censurado += "*"
