@@ -3,12 +3,12 @@ include_once('conexion.php');
 //$con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
 function colecciones($coleccion_p){
     $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
-    $query2 = "SELECT titulo FROM Obra WHERE coleccion='{$coleccion_p}'";
+    $query2 = "SELECT id_obra, titulo FROM Obra WHERE coleccion='{$coleccion_p}'";
     $rec2=mysqli_query($con,$query2);
     while($row2 = mysqli_fetch_array($rec2)){
 
     echo '<article class="imag">
-          <a class="escritura" href="?obra=1"><img class="pr" src="img/logo.png" alt="vistas" />'.$row2["titulo"].'</a>
+          <a class="escritura" href="?obra='.$row2["id_obra"].'"><img class="pr" src="img/logo.png" alt="vistas" />'.$row2["titulo"].'</a>
       </article>';
       }
       mysqli_close( $con );
@@ -18,33 +18,13 @@ function colecciones($coleccion_p){
 function sectionPagPrincArticulos(){
   $_SESSION['tipo']=1;
   $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
-$query1 = "SELECT titulo FROM Obra";
+$query1 = "SELECT id_obra, titulo FROM Obra";
 $rec1=mysqli_query($con,$query1);
 while($row = mysqli_fetch_array($rec1)){
 echo '<article class="imag">
-      <a class="escritura" href="?obra=1"><img class="pr" src="img/logo.png" alt="vistas" />'.$row["titulo"].'</a>
+      <a class="escritura" href="?obra='.$row["id_obra"].'"><img class="pr" src="img/logo.png" alt="vistas" />'.$row["titulo"].'</a>
   </article>';
   }
-  echo'
-  <article class="imag">
-      <a class="escritura" href="?obra=4"><img class="pr" src="img/logo.png" alt="vistas" />Pepito</a>
-  </article>
-  <article class="imag">
-      <a class="escritura" href="?obra=2"><img class="pr" src="img/logo.png" alt="vistas" />Pepito</a>
-  </article>
-  <article class="imag">
-      <a class="escritura" href="?obra=3"><img  class="pr"src="img/logo.png" alt="vistas" />Pepito</a>
-  </article>
-
-  <article class="imag">
-      <a class="escritura" href="?obra=4"><img class="pr" src="img/logo.png" alt="vistas" />Pepito</a>
-  </article>
-  <article class="imag">
-      <a class="escritura" href="?obra=1"><img class="pr" src="img/logo.png" alt="vistas" />Pepito</a>
-  </article>
-  <article class="imag">
-      <a class="escritura" href="?obra=2"><img  class="pr"src="img/logo.png" alt="vistas" />Pepito</a>
-  </article>';
 mysqli_close( $con );
 }
 
@@ -57,10 +37,13 @@ function sectionPagPrincObra($h){
   $rec=mysqli_query($con,$query);
   $obra=mysqli_fetch_array($rec); //array asociativo obra
 
+  $titulo = $obra["titulo"];
+  //echo $titulo;
+
   echo '  <div id="info_obra">
       <h1 id="tit_obra">'.$obra["titulo"].'</h1>
-        <a href="#"><img alt="siguenos en facebook" height="32" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="32" /></a>
-        <a href="#"><img alt="siguenos en Twitter" height="32" src="http://3.bp.blogspot.com/-wlwaJJG-eOY/UiXnHS2jLsI/AAAAAAAAByQ/I2tLyZDLNL4/s1600/Twitter+NEW.png" title="siguenos en Twitter" width="32" /></a>
+        <img alt="siguenos en facebook" onclick="activaFB()" height="32" src="http://2.bp.blogspot.com/-q_Tm1PpPfHo/UiXnJo5l-VI/AAAAAAAABzU/MKdrVYZjF0c/s1600/face.png" title="siguenos en facebook" width="32" />
+        <img alt="siguenos en Twitter" onclick="activaTW()" height="32" src="http://3.bp.blogspot.com/-wlwaJJG-eOY/UiXnHS2jLsI/AAAAAAAAByQ/I2tLyZDLNL4/s1600/Twitter+NEW.png" title="siguenos en Twitter" width="32" />
         <a href="obra_imprimir.html" target="_blank"><img alt="imprime la obra" height="32" src="img/print.png" title="siguenos en Twitter" width="32" /></a>
 
       <h2 id="aut_obra">'.$obra["autor"].'</h2>
@@ -76,6 +59,15 @@ function sectionPagPrincObra($h){
     <div id="des_obra">
     </br> <p id="texto">'.$obra["descripcion"].'</p>
     </div>';
+
+    $query2 = "SELECT nombre FROM imagenes WHERE id_obra= '{$filtro}' ";
+    $rec2=mysqli_query($con,$query2);
+    while($row = mysqli_fetch_array($rec2)){
+    echo '<article class="imag">
+          <img class="pr" src="img/'.$row["nombre"].'" alt="" />
+      </article>';
+      }
+
     mysqli_close( $con );
 }
 
