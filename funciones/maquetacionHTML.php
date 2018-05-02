@@ -9,6 +9,7 @@ function HTMLinicio($titulo){
  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
  <title>'.$titulo.'</title>
  <link rel="stylesheet" type="text/css" href="css/style.css" />
+ <script type="text/javascript" src="js/social.js"></script>
  <script type="text/javascript" src="js/form.js"></script>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <link href="img/favicon.ico" type="image/x-icon" rel="shortcut icon" />
@@ -33,15 +34,13 @@ function cabecera(){
        <div id="cab_der">
            <div id="cab_titulo">
              <h2 id="titulo">MUSEO DEL CARNAVAL</h2>
+			
            </div>
            <div id="cab_menu">
              <nav id="menu_princ">
                  <ul id="menu_sec">
-                     <li id="menu_lista"><a href="#">Índice</a></li>
-                     <li id="menu_lista"><a href="?coleccion=artesanal">Colección Artesanal</a></li>
-                     <li id="menu_lista"><a href="?coleccion=disfraces">Coleccion Disfraces</a></li>
-                     <!--<li id="menu_lista"><a href="#">Obra</a></li>
-                     <li id="menu_lista"><a href="#">Obra Imprimir</a></li>-->
+                     <li id="menu_lista"><a href="/">Índice</a></li>
+                     <li id="menu_lista"><a href="/coleccion.php">Colecciones</a></li>
                  </ul>
              </nav>
            </div>

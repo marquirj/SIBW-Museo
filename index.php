@@ -15,7 +15,7 @@ if(!isset($_GET['obra'])&&!isset($_GET['coleccion'])){
     else if( isset( $_SERVER ['HTTP_VIA'] ))  $ip = $_SERVER['HTTP_VIA'];
     else if( isset( $_SERVER ['REMOTE_ADDR'] ))  $ip = $_SERVER['REMOTE_ADDR'];
     else $ip = null ;
-      echo $ip  ;
+      //echo $ip  ;
   sectionPagPrincArticulos();
  // comentario1Javascript();
   cierreContenido();
@@ -24,10 +24,16 @@ if(!isset($_GET['obra'])&&!isset($_GET['coleccion'])){
   HTMLfin();
 }else{
     echo $_SERVER[‘REMOTE_ADDR’]  ;
-    $indice=$_GET['obra'];
+    if(!isset($_GET['obra'])){
+        $indice=999;
+    }else{
+        $indice=$_GET['obra'];
+    }
+
+    
     $colecc=$_GET['coleccion'];
     $_SESSION['tipo']=$colecc;
-    //echo $nombre;
+
     if($indice==0){
       $_SESSION['obra']=0;
 
@@ -42,7 +48,7 @@ if(!isset($_GET['obra'])&&!isset($_GET['coleccion'])){
 
     if($indice==0){
             sectionPagPrincArticulos();
-    }else if($colecc!=null&&$indice==null){
+    }else if($colecc!=null&&$indice==999){
         colecciones($colecc);
     }else if($indice<=9||$indice>=1){
         $_SESSION['obra']=$indice;
