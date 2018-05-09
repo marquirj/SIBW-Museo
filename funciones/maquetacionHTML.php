@@ -1,4 +1,5 @@
 <?php
+session_start();
 //Esta función es la cabecera de todo documento html, está incluida en cada una de las páginas de nuestra web.
 function HTMLinicio($titulo){
  echo '
@@ -34,7 +35,15 @@ function cabecera(){
        <div id="cab_der">
            <div id="cab_titulo">
              <h2 id="titulo">MUSEO DEL CARNAVAL</h2>
-			
+             <div id="identificador">
+                <form action="sesiones.php" method="POST">
+                 <h4>Acceso Identificado</h4>
+                 <input type="hidden" name="diract" value="'.$_SERVER['PHP_SELF'].'">
+                 <input type="text" name="correo" placeholder="Correo.."></input>
+                 <input type="password" name="clave" placeholder="Contraseña.."></input>
+                 <input type="submit" value="Acceder"/>
+                </form>
+            </div>
            </div>
            <div id="cab_menu">
              <nav id="menu_princ">
@@ -47,6 +56,33 @@ function cabecera(){
        </div>
 </header>';
 }
+
+function cabeceraLogueado(){
+ echo'
+ <header>
+       <div id="cab_izq">
+         <img id="logo" alt="Logo" src="img/logo.png" />
+       </div>
+       <div id="cab_der">
+           <div id="cab_titulo">
+             <h2 id="titulo">MUSEO DEL CARNAVAL</h2>
+             <div id="identificador">
+              <p> Usuario: '.$_SESSION["usuario"].'</p>
+              <a href="cerrarsesion.php">Cerrar Sesion</a>
+              </div>
+           </div>
+           <div id="cab_menu">
+             <nav id="menu_princ">
+                 <ul id="menu_sec">
+                     <li id="menu_lista"><a href="/">Índice</a></li>
+                     <li id="menu_lista"><a href="/coleccion.php">Colecciones</a></li>
+                 </ul>
+             </nav>
+           </div>
+       </div>
+</header>';
+}
+
 //Cierre del pie de página.
 function pie(){
  echo '
@@ -80,6 +116,16 @@ function nav($activo){
              <li><a href="#">Menú 2</a></li>
              <li><a href="#">Menú 3</a></li>
              <li><a href="#">Menú 4</a></li>
+         </ul>
+     </aside>';
+}
+
+function navUsuarioRegistrado($activo){
+ echo '
+ <div id="contenido">
+     <aside id="barra_lateral">
+         <ul>
+             <li><a href="#">Actualiza Perfil</a></li>
          </ul>
      </aside>';
 }

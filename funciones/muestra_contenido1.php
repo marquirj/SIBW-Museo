@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once('conexion.php');
 //$con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
 function colecciones($coleccion_p){

@@ -10,6 +10,27 @@ function mostrar(){
   }
 
 }
+
+function muestraedicion(id, array){
+  if(document.getElementById('abs_comentario').style.visibility=="visible"){
+      document.getElementById('abs_comentario').style.visibility="hidden"
+      document.getElementById('abs_comentario_edicion').style.visibility="visible"
+      //alert(id)
+      //var na = document.getElementById(txt).name;
+      //alert(na)
+      /*alert(txt1)
+      var x = txt1*/
+      //alert(id)
+      //alert(array)
+      document.getElementById('editacom').value= array[id-1]
+      //document.getElementById('bt_comentario').value = "Ver Comentarios"
+  }else{
+    document.getElementById('abs_comentario').style.visibility="visible"
+    document.getElementById('abs_comentario_edicion').style.visibility="hidden"
+  }
+
+}
+
 function enviar(){
   var nombre = document.getElementById('usu').value
   var comentario = document.getElementById('com').value
