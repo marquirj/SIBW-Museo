@@ -4,16 +4,18 @@ function mostrar(){
   if(document.getElementById('abs_comentario').style.visibility=="visible"){
       document.getElementById('abs_comentario').style.visibility="hidden"
       document.getElementById('bt_comentario').value = "Ver Comentarios"
+      document.getElementById('abs_comentario_edicion').style.visibility="hidden"
   }else{
     document.getElementById('abs_comentario').style.visibility="visible"
     document.getElementById('bt_comentario').value = "Ocultar Comentarios"
+    document.getElementById('abs_comentario_edicion').style.visibility="hidden"
   }
 
 }
 
 function muestraedicion(id, array){
-  if(document.getElementById('abs_comentario').style.visibility=="visible"){
-      document.getElementById('abs_comentario').style.visibility="hidden"
+  if(document.getElementById('abs_comentario_edicion').style.visibility=="hidden"){
+      //document.getElementById('abs_comentario').style.visibility="hidden"
       document.getElementById('abs_comentario_edicion').style.visibility="visible"
       //alert(id)
       //var na = document.getElementById(txt).name;
@@ -25,7 +27,7 @@ function muestraedicion(id, array){
       document.getElementById('editacom').value= array[id-1]
       //document.getElementById('bt_comentario').value = "Ver Comentarios"
   }else{
-    document.getElementById('abs_comentario').style.visibility="visible"
+    //document.getElementById('abs_comentario').style.visibility="visible"
     document.getElementById('abs_comentario_edicion').style.visibility="hidden"
   }
 
@@ -47,8 +49,6 @@ function enviar(){
 
 
 }
-
-
 
 function reemplaza(badword){
     // document.write(datos(0))
