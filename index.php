@@ -15,7 +15,12 @@ if(!isset($_GET['obra'])&&!isset($_GET['coleccion'])){
       cabecera();
 
     }
-    nav(0);
+
+    if($_SESSION['cargo']==1){
+        nav(0);
+    }else{
+        navGestor(0);
+    }
     contenido(); //abrimos contenid
     /*if( isset( $_SERVER['HTTP_X_FORWARDED_FOR'] )) $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
       else if( isset( $_SERVER ['HTTP_VIA'] ))  $ip = $_SERVER['HTTP_VIA'];

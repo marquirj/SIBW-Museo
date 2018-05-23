@@ -73,7 +73,7 @@ header, footer{
  color:white;
  border:solid;
  border-width: 1px;
- border-color: #dbc4c5; 
+ border-color: #dbc4c5;
  /*min-width:100px;*/
 }
 
@@ -288,7 +288,7 @@ header, footer{
 }
 
 #texto{
-    padding-top: 10%;
+    padding-top: 18%;
     text-align: justify;
   font-size: 0.95em;
 }

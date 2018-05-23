@@ -112,6 +112,19 @@ function nav($activo){
  <div id="contenido">
      <aside id="barra_lateral">
          <ul>
+             <li>  <form action="añadeobra_form.php" method="POST">
+                   <input type="submit" value="Añadir Obra"/>
+                   </form>
+            </li>
+         </ul>
+     </aside>';
+}
+
+function navGestor($activo){
+ echo '
+ <div id="contenido">
+     <aside id="barra_lateral">
+         <ul>
              <li><a href="#">Menú 1</a></li>
              <li><a href="#">Menú 2</a></li>
              <li><a href="#">Menú 3</a></li>

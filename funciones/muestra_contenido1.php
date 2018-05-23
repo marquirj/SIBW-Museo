@@ -133,13 +133,29 @@ function sectionPagPrincObraGestor($h){
         <img alt="siguenos en Twitter" onclick="activaTW(obra)" height="32" src="http://3.bp.blogspot.com/-wlwaJJG-eOY/UiXnHS2jLsI/AAAAAAAAByQ/I2tLyZDLNL4/s1600/Twitter+NEW.png" title="siguenos en Twitter" width="32" />
         <a href="obra_imprimir.html" target="_blank"><img alt="imprime la obra" height="32" src="img/print.png" title="" width="32" /></a>
 
-        <form action="editaobra.php" method="POST">
+        <p>
+        <form action="editaobra_form.php" method="POST">
+          <input type="hidden" name="id_obra" value="'.$obra["id_obra"].'">
           <input type="hidden" name="titulo" value="'.$obra["titulo"].'">
           <input type="hidden" name="autor" value="'.$obra["autor"].'">
           <input type="hidden" name="datacion" value="'.$obra["datacion"].'">
           <input type="hidden" name="fecha_publicacion" value="'.$obra["fecha_publicacion"].'">
           <input type="hidden" name="fecha_modificacion" value="'.$obra["fecha_modificacion"].'">
-          <input type="submit" value="Edit"/>
+          <input type="hidden" name="descripcion" value="'.$obra["descripcion"].'">
+          <input type="hidden" name="Coleccion" value="'.$obra["Coleccion"].'">
+          <input type="submit" value="Editar"/>
+        </form>
+
+        <form action="borraobra_form.php" method="POST">
+          <input type="hidden" name="id_obra" value="'.$obra["id_obra"].'">
+          <input type="hidden" name="titulo" value="'.$obra["titulo"].'">
+          <input type="hidden" name="autor" value="'.$obra["autor"].'">
+          <input type="hidden" name="datacion" value="'.$obra["datacion"].'">
+          <input type="hidden" name="fecha_publicacion" value="'.$obra["fecha_publicacion"].'">
+          <input type="hidden" name="fecha_modificacion" value="'.$obra["fecha_modificacion"].'">
+          <input type="hidden" name="descripcion" value="'.$obra["descripcion"].'">
+          <input type="hidden" name="Coleccion" value="'.$obra["Coleccion"].'">
+          <input type="submit" value="Borrar"/>
         </form>
 
       <h2 id="aut_obra">'.$obra["autor"].'</h2>
