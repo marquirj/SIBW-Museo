@@ -30,7 +30,7 @@ function filtro_coleccion(){
 function sectionPagPrincArticulos(){
   $_SESSION['tipo']=1;
   $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME)or die("no se ha podido");
-$query1 = "SELECT id_obra,titulo FROM Obra";
+$query1 = "SELECT id_obra,titulo FROM Obra WHERE visible=1";
 $rec1=mysqli_query($con,$query1);
 while($row = mysqli_fetch_array($rec1)){
 echo '<article class="imag">
