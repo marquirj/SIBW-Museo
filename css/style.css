@@ -23,7 +23,12 @@ header, footer{
   height: 15%;
 
 }
-
+#consejos{
+float:left;
+border:solid;
+border-width: 1px;
+border-color: #000000;
+}
 #cab_izq{
   float:left;
   height: 100%;

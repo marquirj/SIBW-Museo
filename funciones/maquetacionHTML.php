@@ -114,7 +114,27 @@ function nav($activo){
          <ul>
              <li>  <form action="añadeobra_form.php" method="POST">
                    <input type="submit" value="Añadir Obra"/>
-                   </form>
+                   </form>';?>
+                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+                    <script>
+                      function buscar_ajax(cadena){
+                        $.ajax({
+                        type: 'POST',
+                        url: 'buscar.php',
+                        data: 'cadena=' + cadena,
+                        success: function(respuesta) {
+                          //Copiamos el resultado en #mostrar
+                          $('#mostrar').html(respuesta);
+                         }
+                      });
+                      }
+                    </script>
+                    <?php echo '
+                    <div id="mostrar"></div>
+                   <li id="menu_lista">
+                    <form>
+                        <input type="text" name="buscar" onkeyup="buscar_ajax(this.value);"></li>
+                    </form>
             </li>
          </ul>
      </aside>';
@@ -129,6 +149,57 @@ function navGestor($activo){
              <li><a href="#">Menú 2</a></li>
              <li><a href="#">Menú 3</a></li>
              <li><a href="#">Menú 4</a></li>
+             <form>
+                 <input type="text" name="obra" list="consejos" onkeyup="buscar_ajax(this.value);"></li>
+             </form>
+             ';?>
+
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+              <script>
+                function buscar_ajax(cadena){
+                  console.log(cadena);
+                  $.ajax({
+                  type: 'POST',
+                  beforeSend: function(){
+                    $("#respuesta").html("Procesando, espere por favor...");
+                  },
+                  url: '/funciones/buscar.php',
+                  data: {cadena1: cadena},
+                  success: function(respuesta) {
+                    //console.log(respuesta);
+                    valores = JSON.parse(respuesta);
+                    console.log(valores["nombre"]);
+                    console.log(valores["id"]);
+
+                    var lista = document.getElementById('consejos');
+                    lista.innerHTML = "";
+                    //for (i = 0 ; i < valores.length ; i++) {
+                    var option = document.createElement('option');
+                    option.value = valores["nombre"];
+                    lista.appendChild(option);
+                    //}
+                    //Copiamos el resultado en #mostrar
+                    //$('#mostrar').html(respuesta);
+                    //$('#mostrar').empty();
+                    //$('#mostrar').append('<a href="" >respuesta[o]["id"]</a>');
+                    /*for( o in valores){
+                      $('#consejos').empty();
+                      $('#consejos').append('<option href="?obra=">'+valores[o]+'</option>');
+                    }*/
+
+                   }
+                });
+                }
+              </script>
+              <?php echo '
+              <datalist id="consejos">
+                <option value=""></option>
+              </datalist>
+
+              <p id="respuesta"></p>
+
+             <li id="menu_lista">
+
          </ul>
      </aside>';
 }
